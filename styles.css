@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,23 +11,366 @@ body {
     color: #000;
 }
 
+strong {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #CC78A6;
+}
+
 header {
     background-color: #8fd6b4;
-    padding: 10px;
+    padding: 8px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-header .menu {
-    align-self: center;
+.menu img {
     width: 3rem;
-    height: auto;
-    border-radius: 9px;
+    cursor: pointer;
 }
 
-header .logo {
-    align-self: center;
-    width: 7rem;
-    height: auto;
-    border-radius: 9px;
+.logo img {
+    width: 10rem;
+}
+
+.perfil img {
+    width: 3rem;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.main-text {
+    padding: 20px 100px;
+}
+
+p {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+h5 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.row-row-cols-1-row-cols-md-3-g-4 {
+    width: 5rem;
+}
+
+.cards img {
+    width: 4.5rem;
+    display: block;
+    margin: 0 auto;
+
+}
+
+footer {
+    background-color: #8fd6b4;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 5px;
+}
+
+/*login.html */
+.login-form {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.login-form .container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.login-form .toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.login-form .toggle-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #8fd6b4;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background 0.3s;
+}
+
+.login-form .toggle-btn:hover {
+    background: #6bbf99;
+}
+
+.login-form .toggle-btn.active {
+    background: #cc78a6;
+}
+
+.login-form .form-container {
+    display: none;
+}
+
+.login-form .form-container.active {
+    display: block;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background: #8fd6b4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.login-form button:hover {
+    background: #6bbf99;
+}
+
+.login-form .switch-form {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-form .switch-form span {
+    color: #cc78a6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*diario.html */  
+.diario-page main {
+    border-radius: 15px;
+    padding: 20px 50px;
+    gap: 25px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+
+}
+
+.diario-page p, label {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.diario-page .dropdown {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.diario-page #dropdownButton {
+    display: flex; 
+    justify-content: space-between; 
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000; 
+    border-radius: 8px;
+    padding: 15px 20px;
+    width: 30%;
+    direction: rtl;
+    align-items: center;
+}
+
+.diario-page .dropdown-menu {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 150px; 
+}
+
+.diario-page .dropdown-item {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 15px 20px;
+}
+
+.diario-page textarea {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: #ffffff;
+    border-radius: 8px; 
+    border: 1px solid #000000;
+    width: 100%; 
+    min-height: 150px;
+    padding: 10px;
+    margin-bottom: 30px; 
+    display: flex;
+    justify-content: center;
+}
+
+.diario-page button {
+    font-family: "Poppins", serif;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #17a2b8;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+
+/*progresso.html */  
+.progresso-page .emotion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progresso-page .emotion-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 18px;
+}
+
+.progresso-page .progress-bar {
+    height: 20px;
+}
+
+.progresso-page .progress-container {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.progresso-page .btn-container {
+    margin-top: 30px;
+}
+
+/*dicas.html */  
+.dicas-page main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dicas-page .list-group {
+    width: 100%;
+}
+
+.dicas-page .list-group-item.active {
+    background-color: #6c63ff;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dicas-page .list-group-item {
+    font-size: 18px;
+    padding: 20px 15px;
+    border-width: 2px;
+}
+
+.dicas-page .list-group + .list-group {
+    margin-top: 30px;
+}
+
+/*meusregistros.html */ 
+.registros-page main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.registros-page .registro-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.registros-page .registro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #6c63ff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.registros-page .registro-data {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6c63ff;
+}
+
+.registros-page .registro-humor {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6c63;
+}
+
+.registros-page .registro-texto {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.registropacientes-page .container {
+    max-width: 600px;
+    margin-top: 50px;
 }
