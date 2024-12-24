@@ -1,4 +1,4 @@
-# Sistema de Autoconhecimento e autodesenvolvimento
+# FREESoul (Sistema de Autoconhecimento e autodesenvolvimento)
 
 ## Status do Projeto
 🚧 Em desenvolvimento 🚧
@@ -22,5 +22,5 @@ O objetivo é ajudar as pessoas a terem autoconhecimento e desenvolvimento pesso
 - Login
 - Registrar diário e humor
 - Ver o histórico de registros e humores
-- Busca paciente por ID para ver os registros
+- Busca paciente por CPF para ver os registros
 - 
