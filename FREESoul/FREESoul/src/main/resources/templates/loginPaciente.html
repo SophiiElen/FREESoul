@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeSoul - Cadastro Paciente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
+</head>
+
+<body>
+<header>
+
+    <div class="menu">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/imgs/menu.png" alt="Menu">
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" th:href="@{/}">Home</a></li>
+                <li><a class="dropdown-item" th:href="@{/diario}">Diário</a></li>
+                <li><a class="dropdown-item" th:href="@{/dicas}">Dicas</a></li>
+                <li><a class="dropdown-item" th:href="@{/progresso}">Progresso</a></li>
+                <li><a class="dropdown-item" th:href="@{/meusregistros}">Meus Registros</a></li>
+                <li><a class="dropdown-item" th:href="@{/registrospaciente}">Registros Pacientes</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="logo">
+        <img src="/imgs/logo.png" alt="Company Logo">
+    </div>
+
+    <div class="perfil">
+        <a th:href="@{/login}" target="_blank"><img src="/imgs/perfil.png" alt="Perfil"></a>
+    </div>
+</header>
+
+<main>
+    <div class="login-form">
+        <div class="container">
+            <div id="loginForm" class="form-container active">
+                <form th:action="@{/gravarPaciente}" method="post" th:object="${paciente}">
+                    <input  type="text" th:field="*{nome}" placeholder="Nome" required class="form-control my-2">
+                    <input type="email" th:field="*{email}" placeholder="E-mail" required class="form-control my-2">
+                    <input type="number" th:field="*{idade}" placeholder="Idade" required class="form-control my-2">
+                    <input type="text" th:field="*{cpf}" placeholder="CPF" required class="form-control my-2">
+                    <input type="password" th:field="*{senha}" placeholder="Senha" required class="form-control my-2">
+                    <button type="submit" class="btn btn-primary btn-custom">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>2024 FreeSoul</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
