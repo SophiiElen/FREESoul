@@ -57,8 +57,13 @@ public class LoginController {
             cookieLog.setMaxAge(7 * 24 * 60 * 60);
             cookieLog.setHttpOnly(true);
             cookieLog.setPath("/");
-
             response.addCookie(cookieLog);
+
+            // Criando cookie para o tipo de usuário
+            Cookie cookieTipo = new Cookie("tipoUsuario", "paciente");
+            cookieTipo.setMaxAge(7 * 24 * 60 * 60);
+            cookieTipo.setPath("/");
+            response.addCookie(cookieTipo);
 
             return "index";
         }
@@ -75,8 +80,15 @@ public class LoginController {
             cookieLog.setMaxAge(7 * 24 * 60 * 60);
             cookieLog.setHttpOnly(true);
             cookieLog.setPath("/");
-
             response.addCookie(cookieLog);
+
+            // Criando cookie para o tipo de usuário
+            Cookie cookieTipo = new Cookie("tipoUsuario", "medico");
+            cookieTipo.setMaxAge(7 * 24 * 60 * 60);
+            cookieTipo.setPath("/");
+            response.addCookie(cookieTipo);
+
+
             return "index";
         }
 
@@ -109,7 +121,7 @@ public class LoginController {
     public String processarMedico(@ModelAttribute Medico medico, Model model){
         medicoService.criar(medico);
         model.addAttribute("mensagem", "Medico cadastrado com sucesso!");
-        return "registrospaciente";
+        return "login";
     }
 
 
